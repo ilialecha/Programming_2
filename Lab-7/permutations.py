@@ -12,5 +12,4 @@ def permutations(s):
     return sorted(L)
 
 s = sys.stdin.readline().strip()
-
 for w in permutations(s): print(w)
