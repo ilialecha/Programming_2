@@ -16,7 +16,7 @@ vector<string> words(int n, vector<char>& A){
         vector<string> LL;
         for(auto s:L){
             for(auto x:A){
-                LL.push_back({x+s});
+                LL.push_back({s+x});
             }
         }
         L = LL;
