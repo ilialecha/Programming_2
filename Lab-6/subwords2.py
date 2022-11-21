@@ -21,22 +21,27 @@ function SUBWORDS(s,i):
         return S1, S2
 '''
 import sys
-def subwords ( s ):
-    S1 , S2 = subwords_rec (s , 0)
-    return sorted ([ x for x in S2 if len ( x ) != 0])
-    
-def subwords_rec (s , i ):
-    if i == len ( s ):
-        return set () , set ()
-    else :
-        S1 , S2 = subwords_rec (s , i + 1)
-        S1 . add ('')
-        SS1 = set ()
-        for w in S1 :
-            ww = s [ i ] + w
-            SS1 . add ( ww )
-            S2 . add ( ww )
-        return SS1 , S2
-s = sys . stdin . readline (). strip ()
-for w in subwords ( s ):
-    print( w )
+
+
+def subwords(s):
+    S1, S2 = subwords_rec(s, 0)
+    return sorted([x for x in S2 if len(x) != 0])
+
+
+def subwords_rec(s, i):
+    if i == len(s):
+        return set(), set()
+    else:
+        S1, S2 = subwords_rec(s, i + 1)
+        S1 . add('')
+        SS1 = set()
+        for w in S1:
+            ww = s[i] + w
+            SS1 . add(ww)
+            S2 . add(ww)
+        return SS1, S2
+
+
+s = sys . stdin . readline(). strip()
+for w in subwords(s):
+    print(w)
