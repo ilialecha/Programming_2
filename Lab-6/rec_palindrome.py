@@ -26,14 +26,12 @@ def COMPLEMENT(c):
     return D[c]
 
 def REC_PALINDROME(s,l):
-    if len(s) % 2 != 0:
+    if len(s) % 2 != 0: # Checking if odd or even
         return False
-    if l > len(s)-l-1:
+    if l > len(s)-l-1: # Checking if there are more elements.
         return True
-    else:
-        if s[l] == COMPLEMENT(s[len(s)-l-1]):
-            return REC_PALINDROME(s,l+1)
-        else:
-            return False
+    if s[l] == COMPLEMENT(s[len(s)-l-1]):
+        return REC_PALINDROME(s,l+1)
+    return False
 
-print(REC_PALINDROME("TTTAGA",0))
+print(REC_PALINDROME("TTTAAFA",0))
