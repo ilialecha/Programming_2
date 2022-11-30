@@ -28,16 +28,20 @@ def COMPLEMENTARY(s):
     return D[s]
 
 def rec_palindrome(S):
-    if 0 >= len(S)-1:
-        return True
-
-    if S[0] == COMPLEMENTARY(S[len(S)-1]):
-        return rec_palindrome(S[1:len(S)-1])
+    if 0 >= len(S) - 1 : return True
+    if S[0] == COMPLEMENTARY( S [ len(S) - 1 ] ): return rec_palindrome( S[ 1 : len(S)-1 ] )
     return False
-
 def palindrome(S):
     if len(S) % 2 != 0: return False
     return rec_palindrome(S)
 
+def bueno_rec_palindrome(S,l):
+    if 0 >= len(S) -1 -l : return True
+    if S[0] == COMPLEMENTARY( S[ len(S) -1-l ] ) : return bueno_rec_palindrome( S[ 1 : len(S)-1-l ], l+1)
+    return False
+def bueno_palindrome(S):
+    if len(S) % 2 != 0 : return False
+    return bueno_rec_palindrome(S,0)
 
-print(palindrome("ACCTAGGT"))
+
+print(bueno_palindrome("ACCTAGGT"))
