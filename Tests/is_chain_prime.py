@@ -107,6 +107,3 @@ has_prime_chain([6, 2, 3, 5, 2], 4)
 has_prime_chain([1, 2, 3, 4, 5, 7, 11], 3)
 has_prime_chain([2, 3, 4, 5, 6, 7], 1)
 has_prime_chain([3,3,3,3,3], 5)'''
-
-
-
