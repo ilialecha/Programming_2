@@ -1,0 +1,15 @@
+GENE_ENUMERATION PSEUDOCODE:
+
+def gene_find(seq):
+	.
+	.
+	.
+
+i <- 0
+
+while i < |seq| do
+	if seq[i:i+3] == "ATG" THEN
+		if gene_find(seq[i:|seq|]) is not nil then
+			return gene_find(seq[i:|seq|])
+	
+	i+=1

@@ -1,0 +1,8 @@
+READ_ABUNDANCE(S)
+	if S not in dict and comp_rev(S) not in dict then
+		dict[minimum of S and comp_rev(S)] = 1
+	
+	else dict[minimum of S and comp_rev(S)] += 1
+	
+
+	

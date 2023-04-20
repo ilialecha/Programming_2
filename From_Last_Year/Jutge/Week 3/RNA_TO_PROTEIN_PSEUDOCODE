@@ -1,0 +1,14 @@
+RNA_TO_PROTEIN(S)
+	while i < |S| and not searching_start do
+		if codon = "AUG" then
+		searching_start <- True
+		
+	while i < |S| and searching_start do
+		if codon = "UAA" or "UAG" or "UGA" then
+			searching_end <- True
+			break
+			
+		else res <- protein_dict[codon]
+	
+	if searching_start and searching_end then
+		print res

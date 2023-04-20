@@ -19,3 +19,20 @@ line = easyinput.read_line()
 while line is not None:
     is_missing(line)
     line = easyinput.read_line()
+
+
+'''
+C = {
+    A:T
+    C:G
+}
+C[0] 
+C[A]
+
+A A T T T
+0 1 2  3 4
+
+
+
+C[S[low]]
+'''

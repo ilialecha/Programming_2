@@ -1,0 +1,29 @@
+GENE_FINIDING PSEUDOCODE:
+
+searching_start <- True
+end_found <- False
+
+res = ""
+
+i <- 0
+
+while searching_start  and i < |seq|-3 do
+	if seq[i:i+3] == "ATG" then
+		res += seq[i:i+3]
+		searching_start <- False
+		i+=2
+	i+=1
+	
+while searching_start is False and i < |seq|-3 do
+	res += seq[i:i+3]
+	
+	if seq[i:i+3] == "TAA" or "TAG" or "TGA" then
+		found_end <- True
+		break
+	i+=3
+
+if found_end then
+	return res
+
+else:
+	return nil
